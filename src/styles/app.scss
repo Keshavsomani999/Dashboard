@@ -1,5 +1,5 @@
 @import "_mixin";
-
+@import "_dashboard";
 
 
 :root {
@@ -33,7 +33,7 @@ a{
 }
 
 
-.adminContainer{
+.admin-container{
   @include grid(1fr 4fr, 2rem);
   height: 100vh;
   background-color: rgb(247, 247, 247);

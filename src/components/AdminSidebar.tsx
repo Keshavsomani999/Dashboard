@@ -1,8 +1,10 @@
 import { Link, Location, useLocation } from "react-router-dom";
-import { RiDashboardFill, RiShoppingBag3Fill } from "react-icons/ri";
+import { RiDashboardFill, RiShoppingBag3Fill,RiCoupon3Fill } from "react-icons/ri";
 import { AiFillFileText } from "react-icons/ai";
 import { IoIosPeople } from "react-icons/io";
 import { IconType } from "react-icons";
+import { FaChartBar,FaChartPie,FaChartLine,FaStopwatch,FaGamepad  } from 'react-icons/fa'
+
 
 const AdminSidebar = () => {
   const location = useLocation();
@@ -10,7 +12,16 @@ const AdminSidebar = () => {
   return (
     <aside>
       <h2> Logo.</h2>
-      <div>
+      
+      <DivOne location={location}/>
+      <DivTwo location={location}/>
+      <DivThree location={location}/>
+    </aside>
+  );
+};
+
+const DivOne = ({location}:{location:Location}) =>(
+<div>
         <h5>Dashboard</h5>
         <ul>
           <Li
@@ -39,9 +50,62 @@ const AdminSidebar = () => {
           />
         </ul>
       </div>
-    </aside>
-  );
-};
+)
+
+const DivTwo = ({location}:{location:Location}) =>(
+  <div>
+        <h5>Charts</h5>
+        <ul>
+          <Li
+            url="/admin/chart/bar"
+            text="Bar"
+            Icon={FaChartBar}
+            location={location}
+          />
+          <Li
+            url="/admin/chart/pie"
+            text="pie"
+            Icon={FaChartPie}
+            location={location}
+          />
+          <Li
+            url="/admin/chart/line"
+            text="Line"
+            Icon={FaChartLine}
+            location={location}
+          />
+         
+        </ul>
+      </div>
+)
+
+const DivThree = ({location}:{location:Location}) =>(
+  <div>
+        <h5>Apps</h5>
+        <ul>
+          <Li
+            url="/admin/apps/stopwatch"
+            text="Stopwatch"
+            Icon={FaStopwatch}
+            location={location}
+          />
+          <Li
+            url="/admin/apps/coupon"
+            text="Coupon"
+            Icon={RiCoupon3Fill}
+            location={location}
+          />
+          <Li
+            url="/admin/apps/toss"
+            text="Toss"
+            Icon={FaGamepad}
+            location={location}
+          />
+          
+        </ul>
+      </div>
+)
+
 
 interface Liprops {
   url: string;
