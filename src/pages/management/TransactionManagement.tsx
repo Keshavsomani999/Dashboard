@@ -67,7 +67,9 @@ const updateHandler = ()=>{
       {/* Main */}
 
       <main className="product-management">
-        <section>
+        <section style={{
+          padding:"2rem"
+        }}>
           <h2>Order Items</h2>
 
           {order.orderItems.map((i) => (
