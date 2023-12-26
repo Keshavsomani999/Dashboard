@@ -23,7 +23,7 @@ const Stopwatch = () => {
   };
 
   useEffect(() => {
-    let intervalID: number;
+    let intervalID: NodeJS.Timer;
 
     if (isRunning) {
       intervalID = setInterval(() => {
@@ -39,11 +39,9 @@ const Stopwatch = () => {
   return (
     <div className="admin-container">
       {/* Side Bar */}
-
       <AdminSidebar />
 
       {/* Main */}
-
       <main className="dashboard-app-container">
         <h1>Stopwatch</h1>
         <section>

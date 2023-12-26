@@ -83,7 +83,7 @@ useEffect(() => {
               <input
                 type="checkbox"
                 checked={includeNumber}
-                onChange={(e) => setIncludeNumber((prev) => !prev)}
+                onChange={() => setIncludeNumber((prev) => !prev)}
               />
 
               <span>Number</span>
@@ -91,7 +91,7 @@ useEffect(() => {
               <input
                 type="checkbox"
                 checked={includeCharacters}
-                onChange={(e) => setIncludeCharacters((prev) => !prev)}
+                onChange={() => setIncludeCharacters((prev) => !prev)}
               />
 
               <span>Characters</span>
@@ -99,7 +99,7 @@ useEffect(() => {
               <input
                 type="checkbox"
                 checked={includeSymbols}
-                onChange={(e) => setIncludeSymbols((prev) => !prev)}
+                onChange={() => setIncludeSymbols((prev) => !prev)}
               />
 
               <span>Symbols</span>

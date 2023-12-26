@@ -109,7 +109,7 @@ interface DoughnutChartProps {
   backgroundColor: string[];
   cutout?: number | string;
   legends?: boolean;
-  offset?: number;
+  offset?: number[];
 }
 
 export const DoughnutChart = ({
@@ -153,7 +153,7 @@ interface PieChartProps {
   labels: string[];
   data: number[];
   backgroundColor: string[];
-  offset?: number;
+  offset?: number[];
 }
 
 export const PieChart = ({

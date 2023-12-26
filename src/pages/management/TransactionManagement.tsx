@@ -2,12 +2,12 @@ import { useState } from "react";
 import AdminSidebar from "../../components/AdminSidebar";
 import { OrderItemType, OrderType } from "../../types";
 import { Link } from "react-router-dom";
-import { set } from "mongoose";
+
 
 const img =
   "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804";
 
-const orderItems: OrderType[] = [
+const orderItems: OrderItemType[] = [
   {
     name: "Puma Shoes",
     photo: img,
